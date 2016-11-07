@@ -44,5 +44,12 @@ title = movies.sort(function(movies, other){
   return movies.title > other.title
 });
 
+movies.forEach(function(mov) {
+  document.getElementById('movie_list').innerHTML += "<td>" + mov.title + "</td>" + "<td>" + mov.director +"</td>" + "<td>"+ mov.genre + "</td>" +  "<td>" + mov.year + "</td>" + "<td>" + mov.actors + "</td>"
+})
+
+
+
+
 
 console.log(JSON.stringify(title))
