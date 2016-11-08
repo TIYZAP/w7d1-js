@@ -110,6 +110,16 @@ stars: "3.7",
 metascore: "17"
 })
 
+bad_movies.push({
+title: "Anything with Tyler Perry",
+director: "Some hack",
+genre: "Terrible",
+year: "19XX",
+actors: ["He's garbage!"],
+stars: "0.0",
+metascore: "ZERO"
+})
+
 // Sort by title!
 
 title = bad_movies.sort(function(movies, other){
