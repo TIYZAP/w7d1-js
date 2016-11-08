@@ -68,7 +68,64 @@ movies.forEach(function(mov) {
 })
 
 
+bad_movies = []
 
+bad_movies.push({
+title: "Gymkata - The Deadly Game",
+director: "Robert Clouse",
+genre: "Martial Arts",
+year: "1985",
+actors: ["Olympic Gold Medalist Kurt Thomas!!!"],
+stars: "4.2",
+metascore: "N/A"
+})
+
+bad_movies.push({
+title: "Battlefield Earth",
+director: "Roger Christian",
+genre: "Sci Fi",
+year: "2000",
+actors: ["John Travolta", "Barry Pepper", "Forest Whitaker", "Kim Coates", "Sabine Karsenti", "Richard Tyson"],
+stars: "2.4",
+metascore: "9"
+})
+
+bad_movies.push({
+title: "Batman & Robin",
+director: "Joel Schumacher",
+genre: "Action",
+year: "1997",
+actors: ["George Clooney", "Chris O'Donnell", "Alicia Silverstone", "Uma Thurman", "Arnold Schwarzenegger"],
+stars: "3.7",
+metascore: "28"
+})
+
+bad_movies.push({
+title: "Street Fighter: The Legend of Chun Li",
+director: "Andrzej Bartkowiak",
+genre: "Action",
+year: "2009",
+actors: ["Kristin Kreuk", "Chris Klien", "Neal McDonough", "Robin Shou", "Moon Bloodgood", "Josie Ho", "Taboo", "Michael Clark Duncan "],
+stars: "3.7",
+metascore: "17"
+})
+
+// Sort by title!
+
+title = bad_movies.sort(function(movies, other){
+  return bad_movies.title > other.title
+});
+
+// Sort by Star Rating!
+
+  star_rating = bad_movies.sort(function(movies, other){
+    return parseFloat(other.stars) - parseFloat(movies.stars)
+  })
+
+bad_movies.forEach(function(mov) {
+  document.getElementById('bad_list').innerHTML += "<td>" + mov.title + "</td>" + "<td>" + mov.director +"</td>" + "<td>"+ mov.genre + "</td>" +  "<td>" + mov.year + "</td>" + "<td>" + mov.actors + "</td>"
+  + "<td>" + mov.stars + "</td>" + "<td>" + mov.metascore + "</td>"
+})
 
 
 console.log(JSON.stringify(title))
